@@ -33,5 +33,4 @@ Implementar algoritmos que permitan el análisis bibliométrico y computacional 
 ### Documento final  
 El proyecto debe estar soportado en un documento de diseño con la correspondiente arquitectura. Se debe presentar para cada requerimiento una explicación técnica con detalles de implementación. El uso de IA debe estar debidamente fundamentado y se proporcionará un documento con los aspectos que deben ser considerados.  
 
-**Nota:** En caso de ser necesario, la presente descripción del proyecto puede ser modificada para efectos de dar mayor claridad en su especificación, en particular con los requerimientos funcionales, los cuales podrán ser especificados con mayor detalle cuando se aclaren algunas restricciones técnicas de las bases de datos.  
-
+**Nota:** En caso de ser necesario, la presente descripción del proyecto puede ser modificada para efectos de dar mayor claridad en su especificación, en particular con los requerimientos funcionales, los cuales podrán ser especificados con mayor detalle cuando se aclaren algunas restricciones técnicas de las bases de datos.
