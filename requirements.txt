@@ -8,3 +8,7 @@ networkx
 nltk
 requests
 beautifulsoup4
+selenium
+pybtex
+setuptools
+webdriver-manager
