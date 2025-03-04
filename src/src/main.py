@@ -10,12 +10,15 @@ import time
 import pybtex.database
 from pybtex.database.output import bibtex as bibtex_output
 
-def setup_driver():
+def setup_driver(profile_path=None):
     service = ChromeService(ChromeDriverManager().install())
     options = webdriver.ChromeOptions()
+    if profile_path:
+        options.add_argument(f"user-data-dir={profile_path}")
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
+# Se obtiene la data de ACM
 def fetch_data_from_acm(driver):
     driver.get('https://dl.acm.org/action/doSearch?AllField=computational+thinking')
     try:
@@ -106,7 +109,7 @@ def main():
     # Save raw data to BibTex files
     save_to_bibtex(acm_data, 'acm_data.bib')
     
-    # Repeat similar steps for other databases (SAGE, ScienceDirect, Scopus)
+    # Repeat similar steps for other databases (ScienceDirect, Scopus)
     
     driver.quit()
 
