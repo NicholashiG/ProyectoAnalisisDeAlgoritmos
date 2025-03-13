@@ -1,7 +1,6 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
@@ -11,56 +10,65 @@ import pybtex.database
 from pybtex.database.output import bibtex as bibtex_output
 import json
 
-def setup_driver(profile_path=None):
+def setup_driver():
     service = ChromeService(ChromeDriverManager().install())
     options = webdriver.ChromeOptions()
-    if profile_path:
-        options.add_argument(f"user-data-dir={profile_path}")
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
 def fetch_data_from_acm(driver):
-    driver.get('https://dl.acm.org/action/doSearch?AllField=computational+thinking')
-    try:
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
-        )
-        time.sleep(5)
+    base_url = 'https://dl.acm.org/action/doSearch?AllField=computational+thinking&pageSize=50&startPage='
+    page_number = 0
+    data = []
 
-        results = driver.find_elements(By.CLASS_NAME, 'issue-item')
-        data = []
-        for result in results:
-            title_element = result.find_element(By.CLASS_NAME, 'issue-item__title')
-            title = title_element.text
+    while True:
+        driver.get(base_url + str(page_number))
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
+            )
+            time.sleep(5)  # Wait for the page to load completely
 
-            try:
-                author_elements = result.find_elements(By.CSS_SELECTOR, '.loa a span')
-                authors = ', '.join([author.text for author in author_elements])
-            except:
-                authors = "Unknown"
+            results = driver.find_elements(By.CLASS_NAME, 'issue-item')
+            if not results:
+                break
 
-            try:
-                year_element = result.find_element(By.CSS_SELECTOR, '.bookPubDate.simple-tooltip__block--b')
-                year = year_element.text.split()[-1]
-            except:
-                year = "Unknown"
+            for result in results:
+                title_element = result.find_element(By.CLASS_NAME, 'issue-item__title')
+                title = title_element.text
 
-            try:
-                abstract_element = result.find_element(By.CLASS_NAME, 'issue-item__abstract')
-                abstract = abstract_element.text
-            except:
-                abstract = "No abstract available"
+                try:
+                    author_elements = result.find_elements(By.CSS_SELECTOR, '.loa a span')
+                    authors = ', '.join([author.text for author in author_elements])
+                except:
+                    authors = "Unknown"
 
-            data.append({
-                'title': title,
-                'author': authors,
-                'year': year,
-                'abstract': abstract
-            })
-        return data
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return []
+                try:
+                    year_element = result.find_element(By.CSS_SELECTOR, '.bookPubDate.simple-tooltip__block--b')
+                    year = year_element.text.split()[-1]
+                except:
+                    year = "Unknown"
+
+                try:
+                    abstract_element = result.find_element(By.CLASS_NAME, 'issue-item__abstract')
+                    abstract = abstract_element.text
+                except:
+                    abstract = "No abstract available"
+
+                data.append({
+                    'title': title,
+                    'author': authors,
+                    'year': year,
+                    'abstract': abstract
+                })
+
+            page_number += 1
+
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            break
+
+    return data
 
 def save_to_bibtex(data, file_path):
     bib_data = pybtex.database.BibliographyData()
