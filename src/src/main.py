@@ -9,6 +9,7 @@ import time
 import pybtex.database
 from pybtex.database.output import bibtex as bibtex_output
 import json
+import shutil
 
 def setup_driver():
     service = ChromeService(ChromeDriverManager().install())
@@ -16,59 +17,61 @@ def setup_driver():
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
-def fetch_data_from_acm(driver):
-    base_url = 'https://dl.acm.org/action/doSearch?AllField=computational+thinking&pageSize=50&startPage='
-    page_number = 0
+def fetch_data_from_page(url):
+    driver = setup_driver()
     data = []
+    try:
+        driver.get(url)
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
+        )
+        time.sleep(5)  # Wait for the page to load completely
 
-    while True:
-        driver.get(base_url + str(page_number))
-        try:
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
-            )
-            time.sleep(5)  # Wait for the page to load completely
+        results = driver.find_elements(By.CLASS_NAME, 'issue-item')
+        for result in results:
+            title_element = result.find_element(By.CLASS_NAME, 'issue-item__title')
+            title = title_element.text
 
-            results = driver.find_elements(By.CLASS_NAME, 'issue-item')
-            if not results:
-                break
+            try:
+                author_elements = result.find_elements(By.CSS_SELECTOR, '.loa a span')
+                authors = ', '.join([author.text for author in author_elements])
+            except:
+                authors = "Unknown"
 
-            for result in results:
-                title_element = result.find_element(By.CLASS_NAME, 'issue-item__title')
-                title = title_element.text
+            try:
+                year_element = result.find_element(By.CSS_SELECTOR, '.bookPubDate.simple-tooltip__block--b')
+                year = year_element.text.split()[-1]
+            except:
+                year = "Unknown"
 
-                try:
-                    author_elements = result.find_elements(By.CSS_SELECTOR, '.loa a span')
-                    authors = ', '.join([author.text for author in author_elements])
-                except:
-                    authors = "Unknown"
+            try:
+                abstract_element = result.find_element(By.CLASS_NAME, 'issue-item__abstract')
+                abstract = abstract_element.text
+            except:
+                abstract = "No abstract available"
 
-                try:
-                    year_element = result.find_element(By.CSS_SELECTOR, '.bookPubDate.simple-tooltip__block--b')
-                    year = year_element.text.split()[-1]
-                except:
-                    year = "Unknown"
-
-                try:
-                    abstract_element = result.find_element(By.CLASS_NAME, 'issue-item__abstract')
-                    abstract = abstract_element.text
-                except:
-                    abstract = "No abstract available"
-
-                data.append({
-                    'title': title,
-                    'author': authors,
-                    'year': year,
-                    'abstract': abstract
-                })
-
-            page_number += 1
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            break
-
+            data.append({
+                'title': title,
+                'author': authors,
+                'year': year,
+                'abstract': abstract
+            })
+    except Exception as e:
+        print(f"An error occurred on page {url}: {e}")
+    finally:
+        driver.quit()
     return data
+
+def fetch_data_from_acm(total_pages):
+    base_url = 'https://dl.acm.org/action/doSearch?AllField=computational+thinking&pageSize=50&startPage='
+    all_data = []
+
+    for page_number in range(total_pages):
+        url = base_url + str(page_number)
+        page_data = fetch_data_from_page(url)
+        all_data.extend(page_data)
+
+    return all_data
 
 def save_to_bibtex(data, file_path):
     bib_data = pybtex.database.BibliographyData()
@@ -117,10 +120,9 @@ def main():
     os.makedirs(raw_data_path, exist_ok=True)
     os.makedirs(processed_data_path, exist_ok=True)
 
-    driver = setup_driver()
-
     # Fetch data from ACM
-    acm_data = fetch_data_from_acm(driver)
+    total_pages = 5  # Set the number of pages to scrape
+    acm_data = fetch_data_from_acm(total_pages)
 
     # Save raw data to BibTex files
     raw_acm_file = os.path.join(raw_data_path, 'acm_data.bib')
@@ -130,10 +132,6 @@ def main():
     unique_file_path = os.path.join(processed_data_path, 'unique_entries.bib')
     duplicates_file_path = os.path.join(processed_data_path, 'duplicates.json')
     remove_duplicates_and_save(acm_data, unique_file_path, duplicates_file_path)
-
-    # Repeat similar steps for other databases (ScienceDirect, Scopus)
-
-    driver.quit()
 
 if __name__ == "__main__":
     main()
