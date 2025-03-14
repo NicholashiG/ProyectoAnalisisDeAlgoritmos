@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import time
 import pybtex.database
 from pybtex.database.output import bibtex as bibtex_output
@@ -22,17 +23,38 @@ def setup_driver():
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
+def handle_cookie_dialog(driver):
+    """Maneja el diálogo de cookies intentando aceptar todas las cookies"""
+    try:
+        # Esperar hasta 5 segundos para que aparezca el diálogo de cookies
+        cookie_button = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"))
+        )
+        # Hacer clic en el botón "Allow all cookies"
+        cookie_button.click()
+        print("Cookies aceptadas exitosamente")
+        # Breve pausa para permitir que la página se actualice
+        time.sleep(1)
+        return True
+    except (TimeoutException, NoSuchElementException) as e:
+        print("No se encontró el diálogo de cookies o ya fue aceptado")
+        return False
+
 def fetch_data_from_page(url, page_number):
     driver = setup_driver()
     data = []
     try:
         print(f"Scraping página {page_number + 1}...")
         driver.get(url)
+        
+        # Manejar el diálogo de cookies
+        handle_cookie_dialog(driver)
+        
         # Esperar a que aparezca al menos un elemento de título
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
         )
-        # Reducir el tiempo de espera a 2 segundos
+        # Tiempo de espera reducido
         time.sleep(2)
 
         results = driver.find_elements(By.CLASS_NAME, 'issue-item')
