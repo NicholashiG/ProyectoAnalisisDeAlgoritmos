@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import re  # Añadido para manejar expresiones regulares
 import tempfile
 import shutil
 from pathlib import Path
@@ -76,6 +77,12 @@ def download_bibtex_from_page(driver, page_number, download_dir):
             EC.presence_of_element_located((By.CLASS_NAME, "ResultItem"))
         )
         
+        # Limpiar archivos .bib existentes en el directorio de descargas antes de exportar
+        for file in os.listdir(download_dir):
+            if file.endswith('.bib'):
+                os.remove(os.path.join(download_dir, file))
+                print(f"Limpiando archivo previo: {file}")
+        
         # Instrucciones para selección manual
         print("\n=== SELECCIÓN MANUAL DE ARTÍCULOS ===")
         print("1. Ahora puedes seleccionar manualmente los artículos que deseas exportar")
@@ -112,7 +119,7 @@ def download_bibtex_from_page(driver, page_number, download_dir):
                 downloaded = True
                 print(f"Archivo BibTeX descargado: {bibtex_files[0]}")
                 # Dar tiempo para que termine de descargarse completamente
-                time.sleep(2)
+                time.sleep(3)  # Aumentado a 3 segundos para garantizar que se complete
                 break
             time.sleep(1)
         
@@ -125,21 +132,63 @@ def download_bibtex_from_page(driver, page_number, download_dir):
         if not bibtex_files:
             return None
         
-        bibtex_file_path = os.path.join(download_dir, bibtex_files[0])
-        return bibtex_file_path
+        # Renombramos el archivo descargado para incluir la página y evitar sobreescrituras
+        original_path = os.path.join(download_dir, bibtex_files[0])
+        new_filename = f"sciencedirect_page_{page_number}_{int(time.time())}.bib"
+        new_path = os.path.join(download_dir, new_filename)
+        
+        # Usar shutil.copy2 en lugar de renombrar para evitar problemas con descargas en curso
+        shutil.copy2(original_path, new_path)
+        print(f"Archivo renombrado: {new_filename}")
+        
+        return new_path
         
     except Exception as e:
         print(f"Error al descargar BibTeX de la página {page_number}: {e}")
         return None
+
 def combine_bibtex_files(file_paths, output_path):
-    """Combina varios archivos BibTeX en uno solo"""
-    with open(output_path, 'w', encoding='utf-8') as outfile:
-        for file_path in file_paths:
-            if file_path and os.path.exists(file_path):
+    """Combina varios archivos BibTeX en uno solo, asegurando que no haya duplicados"""
+    all_content = ""
+    entry_ids = set()  # Para rastrear IDs ya procesadas
+    
+    print(f"Combinando {len(file_paths)} archivos BibTeX...")
+    
+    for file_path in file_paths:
+        if file_path and os.path.exists(file_path):
+            print(f"Procesando: {os.path.basename(file_path)}")
+            try:
                 with open(file_path, 'r', encoding='utf-8') as infile:
-                    outfile.write(infile.read())
-                    outfile.write('\n\n')
+                    content = infile.read()
+                    
+                    # Dividir el contenido en entradas individuales
+                    entries = content.split('@')
+                    
+                    # Procesar cada entrada (excepto la primera que puede estar vacía)
+                    for entry in entries:
+                        if entry.strip():
+                            # Reconstruir la entrada con el símbolo '@'
+                            entry = '@' + entry
+                            
+                            # Extraer ID provisional de la entrada
+                            entry_match = re.search(r'@\w+{([^,]+),', entry)
+                            
+                            if entry_match:
+                                entry_id = entry_match.group(1)
+                                
+                                # Si la entrada no está duplicada, añadirla
+                                if entry_id not in entry_ids:
+                                    entry_ids.add(entry_id)
+                                    all_content += entry + "\n\n"
+            except Exception as e:
+                print(f"Error al procesar archivo {file_path}: {e}")
+    
+    # Escribir el contenido combinado al archivo final
+    with open(output_path, 'w', encoding='utf-8') as outfile:
+        outfile.write(all_content)
+    
     print(f"Archivos BibTeX combinados en: {output_path}")
+    print(f"Total de entradas únicas: {len(entry_ids)}")
 
 def fetch_data_from_sciencedirect(total_pages, output_file):
     """Extrae datos BibTeX de ScienceDirect para múltiples páginas"""
@@ -160,25 +209,57 @@ def fetch_data_from_sciencedirect(total_pages, output_file):
             bibtex_files = []
             for page in range(1, total_pages + 1):
                 print(f"\n--- Procesando página {page} de {total_pages} ---")
-                bibtex_file = download_bibtex_from_page(driver, page, temp_dir)
-                if bibtex_file:
-                    # Crear directorio de destino si no existe
-                    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-                    
-                    # Copiar archivo al directorio de destino con un nombre único
-                    dest_file = f"sciencedirect_page_{page}.bib"
-                    dest_path = os.path.join(os.path.dirname(output_file), dest_file)
-                    shutil.copy2(bibtex_file, dest_path)
-                    bibtex_files.append(dest_path)
-                    print(f"Archivo guardado como: {dest_path}")
+                
+                # Intentar hasta 3 veces la descarga por si hay problemas
+                for attempt in range(3):
+                    try:
+                        bibtex_file = download_bibtex_from_page(driver, page, temp_dir)
+                        if bibtex_file:
+                            # Crear directorio de destino si no existe
+                            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+                            
+                            # Copiar archivo al directorio de destino con un nombre único
+                            dest_file = f"sciencedirect_page_{page}.bib"
+                            dest_path = os.path.join(os.path.dirname(output_file), dest_file)
+                            
+                            # Si ya existe un archivo con ese nombre, eliminarlo antes
+                            if os.path.exists(dest_path):
+                                os.remove(dest_path)
+                                
+                            shutil.copy2(bibtex_file, dest_path)
+                            bibtex_files.append(dest_path)
+                            print(f"Archivo guardado como: {dest_path}")
+                            break  # Salir del bucle de intentos si se logró la descarga
+                    except Exception as e:
+                        print(f"Error en el intento {attempt+1}/3 para la página {page}: {e}")
+                        if attempt == 2:  # Último intento
+                            print(f"No se pudo descargar BibTeX para la página {page} después de 3 intentos")
                 else:
+                    # Este bloque se ejecuta si el bucle 'for' terminó normalmente (sin break)
                     print(f"No se pudo descargar BibTeX para la página {page}")
             
             # Combinar todos los archivos BibTeX en uno solo
             if bibtex_files:
-                combine_bibtex_files(bibtex_files, output_file)
-                print(f"Proceso completado. Archivo final: {output_file}")
-                return True
+                # Verificamos cada archivo antes de combinarlo
+                valid_files = []
+                for file_path in bibtex_files:
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                            if '@' in content:  # Verificar que sea un archivo BibTeX válido
+                                valid_files.append(file_path)
+                            else:
+                                print(f"Archivo descartado (no es BibTeX válido): {file_path}")
+                    except Exception as e:
+                        print(f"Error al leer archivo {file_path}: {e}")
+                
+                if valid_files:
+                    combine_bibtex_files(valid_files, output_file)
+                    print(f"Proceso completado. Archivo final: {output_file}")
+                    return True
+                else:
+                    print("No se encontraron archivos BibTeX válidos para combinar.")
+                    return False
             else:
                 print("No se encontraron archivos BibTeX para combinar.")
                 return False
