@@ -1,6 +1,7 @@
 import json
 from src.formatters.bibtex_formatter import save_to_bibtex
 
+
 def remove_duplicates_and_save(data, unique_file_path, duplicates_file_path):
     """Elimina duplicados basados en título y guarda los resultados"""
     unique_entries = []
@@ -15,8 +16,8 @@ def remove_duplicates_and_save(data, unique_file_path, duplicates_file_path):
         else:
             # Verificar si la entrada actual tiene más información que la existente
             existing_entry = unique_entries[seen_titles[title]]
-            if (len(entry['abstract']) > len(existing_entry['abstract']) and 
-                existing_entry['abstract'] == "No abstract available"):
+            if (len(entry['abstract']) > len(existing_entry['abstract']) and
+                    existing_entry['abstract'] == "No abstract available"):
                 # Reemplazar la entrada existente con esta más completa
                 unique_entries[seen_titles[title]] = entry
                 duplicates.append(existing_entry)
@@ -32,5 +33,5 @@ def remove_duplicates_and_save(data, unique_file_path, duplicates_file_path):
         json.dump(duplicates, f, indent=4, ensure_ascii=False)
     print(f"Archivo de registros duplicados guardado en: {duplicates_file_path}")
     print(f"Entradas duplicadas: {len(duplicates)}")
-    
+
     return unique_entries, duplicates
