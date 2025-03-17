@@ -22,7 +22,7 @@ def main():
     os.makedirs(processed_data_path, exist_ok=True)
 
     # Fetch data from ACM
-    acm_pages = 1  # Set the number of pages to scrape
+    acm_pages = 20  # Cambia este valor para descargar más artículos
     print(f"\n=== Iniciando extracción de {acm_pages} páginas de ACM Digital Library ===")
     acm_data = fetch_data_from_acm(acm_pages)
     raw_acm_file = os.path.join(raw_data_path, 'acm_data.bib')
@@ -30,7 +30,7 @@ def main():
     print(f"Datos sin procesar de ACM guardados en: {raw_acm_file}")
 
     # Fetch data from IEEE
-    ieee_pages = 3  # Set the number of pages to scrape
+    ieee_pages = 40  # Cambia este valor para descargar más artículos
     print(f"\n=== Iniciando extracción de {ieee_pages} páginas de IEEE Xplore ===")
     ieee_data = fetch_data_from_ieee(ieee_pages)
     raw_ieee_file = os.path.join(raw_data_path, 'ieee_data.bib')

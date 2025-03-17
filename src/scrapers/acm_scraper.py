@@ -56,6 +56,7 @@ def fetch_data_from_page(url, page_number):
         driver.quit()
     return data
 
+
 def fetch_data_from_acm(total_pages):
     """Extrae datos de múltiples páginas de resultados de ACM Digital Library"""
     base_url = 'https://dl.acm.org/action/doSearch?AllField=computational+thinking&pageSize=50&startPage='
@@ -65,9 +66,10 @@ def fetch_data_from_acm(total_pages):
         url = base_url + str(page_number)
         page_data = fetch_data_from_page(url, page_number)
         all_data.extend(page_data)
+
         # Pausa corta entre páginas para evitar sobrecarga del servidor
         if page_number < total_pages - 1:
-            time.sleep(1)
+            time.sleep(1)  # Reducir el tiempo de espera si es necesario
 
     print(f"Total de artículos extraídos: {len(all_data)}")
     return all_data

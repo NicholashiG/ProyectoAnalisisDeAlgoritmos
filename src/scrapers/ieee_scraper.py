@@ -66,7 +66,7 @@ def fetch_data_from_ieee(total_pages):
 
             # Pausa corta entre páginas para evitar sobrecarga del servidor
             if page_number < total_pages:
-                time.sleep(1)
+                time.sleep(1)  # Reducir el tiempo de espera si es necesario
 
     except Exception as e:
         print(f"Error durante la extracción de datos: {e}")
