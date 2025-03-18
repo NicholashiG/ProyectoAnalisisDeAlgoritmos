@@ -1,62 +1,62 @@
 [
     {
         "Método de ordenamiento": "TimSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 1.1556148529052734
+        "Tamaño": 5191,
+        "Tiempo (ms)": 20.36428451538086
     },
     {
         "Método de ordenamiento": "CombSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 1.7371177673339844
+        "Tamaño": 5191,
+        "Tiempo (ms)": 35.36820411682129
     },
     {
         "Método de ordenamiento": "SelectionSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 13.293027877807617
+        "Tamaño": 5191,
+        "Tiempo (ms)": 862.5669479370117
     },
     {
         "Método de ordenamiento": "TreeSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 0.8673667907714844
+        "Tamaño": 5191,
+        "Tiempo (ms)": 11.136054992675781
     },
     {
         "Método de ordenamiento": "PigeonholeSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 2.531290054321289
+        "Tamaño": 5191,
+        "Tiempo (ms)": 4.519224166870117
     },
     {
         "Método de ordenamiento": "BucketSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 11.948108673095703
+        "Tamaño": 5191,
+        "Tiempo (ms)": 988.5380268096924
     },
     {
         "Método de ordenamiento": "QuickSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 1.1501312255859375
+        "Tamaño": 5191,
+        "Tiempo (ms)": 13.768911361694336
     },
     {
         "Método de ordenamiento": "HeapSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 1.6460418701171875
+        "Tamaño": 5191,
+        "Tiempo (ms)": 22.223711013793945
     },
     {
         "Método de ordenamiento": "BitonicSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 5.06591796875
+        "Tamaño": 5191,
+        "Tiempo (ms)": 60.46462059020996
     },
     {
         "Método de ordenamiento": "GnomeSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 32.52887725830078
+        "Tamaño": 5191,
+        "Tiempo (ms)": 3035.360336303711
     },
     {
         "Método de ordenamiento": "BinaryInsertionSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 4.707813262939453
+        "Tamaño": 5191,
+        "Tiempo (ms)": 472.9294776916504
     },
     {
         "Método de ordenamiento": "RadixSort",
-        "Tamaño": 524,
-        "Tiempo (ms)": 18.53799819946289
+        "Tamaño": 5191,
+        "Tiempo (ms)": 188.67206573486328
     }
 ]

@@ -26,7 +26,7 @@ def main():
     os.makedirs(processed_data_path, exist_ok=True)
 
     # Fetch data from ScienceDirect (ahora primero)
-    sciencedirect_pages = 3  # Número de páginas a extraer de ScienceDirect
+    sciencedirect_pages = 30  # Número de páginas a extraer de ScienceDirect
     print(f"\n=== Iniciando extracción de {sciencedirect_pages} páginas de ScienceDirect ===")
     sciencedirect_data = fetch_data_from_sciencedirect(sciencedirect_pages)
 
@@ -36,7 +36,7 @@ def main():
     print(f"Datos sin procesar de ScienceDirect guardados en: {sciencedirect_raw_file}")
 
     # Fetch data from ACM (ahora segundo)
-    acm_pages = 3  # Número de páginas a extraer de ACM
+    acm_pages = 30  # Número de páginas a extraer de ACM
     print(f"\n=== Iniciando extracción de {acm_pages} páginas de ACM Digital Library ===")
     acm_data = fetch_data_from_acm(acm_pages)
 
@@ -46,7 +46,7 @@ def main():
     print(f"Datos sin procesar de ACM guardados en: {acm_raw_file}")
 
     # Fetch data from IEEE (ahora tercero)
-    ieee_pages = 3  # Número de páginas a extraer de IEEE
+    ieee_pages = 30  # Número de páginas a extraer de IEEE
     print(f"\n=== Iniciando extracción de {ieee_pages} páginas de IEEE Xplore ===")
     ieee_data = fetch_data_from_ieee(ieee_pages)
 
