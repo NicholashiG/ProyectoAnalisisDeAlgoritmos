@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from src.drivers.web_driver import setup_driver, handle_cookie_dialog
 
+
 def fetch_data_from_page(url, page_number):
     """Extrae datos de artículos de una página específica de ACM Digital Library"""
     driver = setup_driver()
@@ -11,10 +12,10 @@ def fetch_data_from_page(url, page_number):
     try:
         print(f"Scraping página {page_number + 1}...")
         driver.get(url)
-        
+
         # Manejar el diálogo de cookies
         handle_cookie_dialog(driver)
-        
+
         # Esperar a que aparezca al menos un elemento de título
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, 'issue-item__title'))
@@ -27,16 +28,16 @@ def fetch_data_from_page(url, page_number):
             try:
                 title_element = result.find_element(By.CLASS_NAME, 'issue-item__title')
                 title = title_element.text.strip()
-                
+
                 author_elements = result.find_elements(By.CSS_SELECTOR, '.loa a span')
                 authors = ', '.join([author.text for author in author_elements]) if author_elements else "Unknown"
-                
+
                 year_element = result.find_element(By.CSS_SELECTOR, '.bookPubDate.simple-tooltip__block--b')
                 year = year_element.text.split()[-1] if year_element else "Unknown"
-                
+
                 abstract_element = result.find_element(By.CLASS_NAME, 'issue-item__abstract')
                 abstract = abstract_element.text.strip() if abstract_element else "No abstract available"
-                
+
                 # Solo añadir si el título no está vacío
                 if title:
                     data.append({
@@ -48,7 +49,7 @@ def fetch_data_from_page(url, page_number):
             except Exception as e:
                 # Ignorar elementos que no se pueden procesar correctamente
                 continue
-                
+
         print(f"Encontrados {len(data)} artículos en la página {page_number + 1}")
     except Exception as e:
         print(f"Error en la página {page_number + 1} ({url}): {e}")
