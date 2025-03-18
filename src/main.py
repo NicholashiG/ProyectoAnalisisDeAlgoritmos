@@ -9,7 +9,7 @@ sys.path.append(str(ROOT_DIR))
 
 # Ahora importamos correctamente los módulos
 from src.scrapers.acm_scraper import fetch_data_from_acm
-from src.scrapers.pubmed_scraper import fetch_data_from_pubmed
+from src.scrapers.ieee_scraper import fetch_data_from_ieee
 from src.scrapers.sciencedirect_scraper import fetch_data_from_sciencedirect
 from src.processors.data_processor import remove_duplicates_and_save
 from src.formatters.bibtex_formatter import save_to_bibtex
@@ -35,15 +35,15 @@ def main():
     save_to_bibtex(acm_data, acm_raw_file)
     print(f"Datos sin procesar de ACM guardados en: {acm_raw_file}")
 
-    # Fetch data from PubMed
-    pubmed_pages = 3  # Número de páginas a extraer de PubMed
-    print(f"\n=== Iniciando extracción de {pubmed_pages} páginas de PubMed ===")
-    pubmed_data = fetch_data_from_pubmed(pubmed_pages)
+    # Fetch data from IEEE
+    ieee_pages = 3  # Número de páginas a extraer de IEEE
+    print(f"\n=== Iniciando extracción de {ieee_pages} páginas de IEEE Xplore ===")
+    ieee_data = fetch_data_from_ieee(ieee_pages)
 
-    # Save raw PubMed data
-    pubmed_raw_file = os.path.join(raw_data_path, 'pubmed_data.bib')
-    save_to_bibtex(pubmed_data, pubmed_raw_file)
-    print(f"Datos sin procesar de PubMed guardados en: {pubmed_raw_file}")
+    # Save raw IEEE data
+    ieee_raw_file = os.path.join(raw_data_path, 'ieee_data.bib')
+    save_to_bibtex(ieee_data, ieee_raw_file)
+    print(f"Datos sin procesar de IEEE guardados en: {ieee_raw_file}")
 
     # Fetch data from ScienceDirect
     sciencedirect_pages = 3  # Número de páginas a extraer de ScienceDirect
@@ -56,7 +56,7 @@ def main():
     print(f"Datos sin procesar de ScienceDirect guardados en: {sciencedirect_raw_file}")
 
     # Combine data from all sources
-    combined_data = acm_data + pubmed_data + sciencedirect_data
+    combined_data = acm_data + ieee_data + sciencedirect_data
 
     # Remove duplicates and save unique entries
     unique_file_path = os.path.join(processed_data_path, 'unique_entries.bib')
