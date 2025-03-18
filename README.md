@@ -17,7 +17,7 @@ El dominio de conocimiento del proyecto es el **pensamiento computacional** (*Co
 - [Artículo 3](https://revista.eia.edu.co/index.php/reveia/article/view/1716)
 
 ## Fuentes de Información  
-Se utilizarán bases de datos científicas disponibles en la [biblioteca de la Universidad del Quindío](https://library.uniquindio.edu.co/databases), incluyendo ACM, SAGE, ScienceDirect y Scopus. La información se obtendrá en formatos RIS, BibTex, CSV o texto plano, considerando restricciones de acceso y calidad de datos.
+Se utilizarán bases de datos científicas disponibles en la [biblioteca de la Universidad del Quindío](https://library.uniquindio.edu.co/databases), incluyendo ACM, SAGE, ScienceDirect. La información se obtendrá en formatos RIS, BibTex, CSV o texto plano, considerando restricciones de acceso y calidad de datos.
 
 ## Propósito del Proyecto  
 Implementar algoritmos para el análisis bibliométrico y computacional sobre el dominio del pensamiento computacional, utilizando bases de datos disponibles en la universidad. Se desarrollarán técnicas bibliométricas, representación de información y análisis cuantitativo. Además, se desplegará la aplicación con su respectiva documentación.

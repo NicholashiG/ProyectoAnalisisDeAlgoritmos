@@ -1,7 +1,16 @@
 import json
 import os
+import sys
+from pathlib import Path
+
+# Añadir el directorio raíz al path para permitir importaciones absolutas
+ROOT_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(str(ROOT_DIR))
+
+# Ahora importamos correctamente los módulos
 from src.scrapers.acm_scraper import fetch_data_from_acm
 from src.scrapers.pubmed_scraper import fetch_data_from_pubmed
+from src.scrapers.sciencedirect_scraper import fetch_data_from_sciencedirect
 from src.processors.data_processor import remove_duplicates_and_save
 from src.formatters.bibtex_formatter import save_to_bibtex
 from src.reader_resourses.algorithmsExecution import AlgorithmsExecution
@@ -36,8 +45,18 @@ def main():
     save_to_bibtex(pubmed_data, pubmed_raw_file)
     print(f"Datos sin procesar de PubMed guardados en: {pubmed_raw_file}")
 
-    # Combine data from both sources
-    combined_data = acm_data + pubmed_data
+    # Fetch data from ScienceDirect
+    sciencedirect_pages = 3  # Número de páginas a extraer de ScienceDirect
+    print(f"\n=== Iniciando extracción de {sciencedirect_pages} páginas de ScienceDirect ===")
+    sciencedirect_data = fetch_data_from_sciencedirect(sciencedirect_pages)
+
+    # Save raw ScienceDirect data
+    sciencedirect_raw_file = os.path.join(raw_data_path, 'sciencedirect_data.bib')
+    save_to_bibtex(sciencedirect_data, sciencedirect_raw_file)
+    print(f"Datos sin procesar de ScienceDirect guardados en: {sciencedirect_raw_file}")
+
+    # Combine data from all sources
+    combined_data = acm_data + pubmed_data + sciencedirect_data
 
     # Remove duplicates and save unique entries
     unique_file_path = os.path.join(processed_data_path, 'unique_entries.bib')
