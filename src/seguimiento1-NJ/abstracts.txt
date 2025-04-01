@@ -1,0 +1,494 @@
+# ABSTRACTS DE ARTÍCULOS ACADÉMICOS
+
+## 1. Título no disponible
+
+Research articleYoung children’s copying of block constructions: Significant constraints in a highly complex taskCognitive DevelopmentJuly–September 2024Barbara LandauE. Emory DavisAmy L. SheltonAbstractExtractsFiguresExport ... and suggests that children’s building is guided by significant cognitive constraints consistent with “computational ... thinking”. • We use novel analytic methods to characterize children's block building. • 4- to 8-year-old ... findings offer new insights into how children build efficiently and accurately, reflecting the child's "computational ...
+
+--------------------------------------------------------------------------------
+
+## 2. Título no disponible
+
+Research articlePopulation characteristic exploitation-based multi-orientation multi-objective gene selection for microarray data classificationComputers in Biology and MedicineMarch 2024Min LiRutun CaoShaobo DengAbstractExtractsFiguresExport ... In contrast to these strategies, this paper introduces a novel perspective by adopting reverse thinking ... It is confirmed that the “reverse-thinking" approach not only avoids local optima but also leverages ...
+
+--------------------------------------------------------------------------------
+
+## 3. Título no disponible
+
+Research articleModulation of creativity by transcranial direct current stimulationBrain StimulationSeptember–October 2019Elisabeth HertensteinElena WaibelChristoph NissenAbstractExtractsFiguresExport ... tasks on major aspects of creativity: conceptual expansion (Alternate Uses Task, AUT), associative thinking ... protocol impairs creativity. • Enhancement of creativity in individuals with an impairment in flexible thinking ... may be possible in the future. • Specific psychotherapeutic interventions with the aim of "thinking ...
+
+--------------------------------------------------------------------------------
+
+## 4. Título no disponible
+
+This study aims to investigate current trends and key elements of computational thinking in problem-solving within mathematics education. A systematic literature review was conducted using the 2013-2013 Scopus database, focusing on the keyword "...
+
+--------------------------------------------------------------------------------
+
+## 5. Título no disponible
+
+Computational Thinking skills along with reading, writing, and calculating skills are basic skills for children’s future. Computational Thinking has much in common with problem-solving and creative thinking in general. With regard to Karl Popper "all ...
+
+--------------------------------------------------------------------------------
+
+## 6. Título no disponible
+
+This article provides a summary of a research plan as part of the "educational robotics" line of research of the doctoral plan for training in the Knowledge Society. The main objective of the research plan is to propose a curricular approach of ...
+
+--------------------------------------------------------------------------------
+
+## 7. Título no disponible
+
+This poster outlines the design and results of a course entitled "Computational Thinking in Music." The course teaches computational thinking principles as a general education objective to undergraduate students, using data-driven investigation to ...
+
+--------------------------------------------------------------------------------
+
+## 8. Título no disponible
+
+In this article I present a theoretical framework for the concept "computational thinking". I do so in response to some of the problems and consequences of the lack of viable theoretical foundations; especially in relation to the development in recent ...
+
+--------------------------------------------------------------------------------
+
+## 9. Título no disponible
+
+Modeling or building models is a widely spread concept that includes several competences relevant for every domain. Our Erasmus+ project "Modeling at school", hence, aims at integrating modeling techniques from the field of computer science such as ...
+
+--------------------------------------------------------------------------------
+
+## 10. Título no disponible
+
+Computational thinking (CT) is a means to help learners engage in authentic disciplinary and problem-solving practices of computer science (CS). For CS classrooms, CT is considered "thinking like a computer scientist". CT is believed to be an important ...
+
+--------------------------------------------------------------------------------
+
+## 11. Título no disponible
+
+At present, there is a certain lag in the teaching ability of computational thinking in our country. This article is based on STEM86 platform, ISTE published by the author "Educator standards: Under the guidance of computational Thinking ability, a ...
+
+--------------------------------------------------------------------------------
+
+## 12. Título no disponible
+
+Considering the expression "computational thinking" as an entry point to understand why the fundamental contribution of computing to science is the shift from solving problems to having problems solved.
+
+--------------------------------------------------------------------------------
+
+## 13. Título no disponible
+
+It has been argued that computational thinking should precede computer programming in the course of a career in computing. This argument is the basis for the slogan "logic first, syntax later" and the development of many cryptic syntax removed ...
+
+--------------------------------------------------------------------------------
+
+## 14. Título no disponible
+
+As final event of the project "Informatics - A Child's Play?!", which aimed at introducing computational thinking in primary and secondary schools, the authors initiated the first Children's Congress in 2016 with the main theme of "Languages - Pictures -...
+
+--------------------------------------------------------------------------------
+
+## 15. Título no disponible
+
+In this paper, we argue for a pedagogical approach of embracing "mistakes" as an effective teaching tool for coding. This technique of teaching uses mistakes as a learning tool to teach computational thinking. Instead of simply showing and explaining ...
+
+--------------------------------------------------------------------------------
+
+## 16. Título no disponible
+
+Collaborative learning can help reduce the anxiety level of learners, improve understanding and thus create a positive atmosphere for learning. This study analyzes students' collaborative learning experiences within small interdisciplinary "cohorts" ...
+
+--------------------------------------------------------------------------------
+
+## 17. Título no disponible
+
+With national K-12 education initiatives such as "CSForAll," block-based programming environments have emerged as widely used tools for teaching novice programming. A key challenge presented by block-based programming environments is assessing students' ...
+
+--------------------------------------------------------------------------------
+
+## 18. Título no disponible
+
+This paper presents the preliminary results of the project "Computational Thinking for children education", aimed at promoting computational thinking, creativity and learning amongst primary school children. The didactic activities of the project focus ...
+
+--------------------------------------------------------------------------------
+
+## 19. Computational thinking beyond STEM: an introduction to "moral machines" and programming decision making in ethics classroom
+
+This paper describes a learning activity on computational thinking in Ethics classroom with compulsory secondary school students (14-16 years). It is based on the assumption that computational thinking (or better "logical thinking") is applicable not ...
+
+--------------------------------------------------------------------------------
+
+## 20. Título no disponible
+
+Even though the computer science education community has not definitively established exactly what ?Computational Thinking" entails, most will agree that it is using a computing machine to solve problems. Like all tools for solving problems, this ...
+
+--------------------------------------------------------------------------------
+
+## 21. Computational Thinking in Italian Schools: Quantitative Data and Teachers' Sentiment Analysis after Two Years of "Programma il Futuro"
+
+In this paper the first two years of activities of "Programma il Futuro" project are described. Its goal is to disseminate among teachers in Italian primary and secondary schools a better awareness of informatics as the scientific basis of digital ...
+
+--------------------------------------------------------------------------------
+
+## 22. Título no disponible
+
+This paper introduces a rubric for analyzing "mobile computational thinking" (MCT) as represented in App Inventor work products. To demonstrate its efficacy, this rubric was used to evaluate and compare student work from the CS and non-CS student cohorts ...
+
+--------------------------------------------------------------------------------
+
+## 23. Título no disponible
+
+Many advanced countries are recognizing more and more the importance of teaching computing, in some cases even as early as in primary school. "Computational thinking" is the term often used to denote the conceptual core of computer science or "the way a ...
+
+--------------------------------------------------------------------------------
+
+## 24. Computational Thinking, Inferential Thinking and "Big Data"
+
+The phenomenon of "Big Data" is creating a need for research perspectives that blend computational thinking (with its focus on, e.g., abstractions, algorithms and scalability) with inferential thinking (with its focus on, e.g., underlying populations, ...
+
+--------------------------------------------------------------------------------
+
+## 25. Título no disponible
+
+We present an education scenario for the simulation of the "pixel" of a computer screen. The teaching and learning process is implemented as a game problem based scenario related to the "rescue" of an object by the students. We used the Arduino ...
+
+--------------------------------------------------------------------------------
+
+## 26. Título no disponible
+
+Trastea.club (http://www.trastea.club/) is an initiative of the University of Deusto (Spain) aimed to develop STEM-related skills among young students (STEM stands for Science, Technology, Engineering, and Science). We chose the name "trastea" because ...
+
+--------------------------------------------------------------------------------
+
+## 27. Título no disponible
+
+Are fine arts and technology compatible partners" Do these disciplines support each other or flinch when they are combined like oil and water" Do collaborative efforts provide interesting insights and opportunities for students" For practitioners" There ...
+
+--------------------------------------------------------------------------------
+
+## 28. Título no disponible
+
+Consider the following scenario: A student is browsing Facebook and sees a strangely compelling image on her friend's page. She follows the "how I made this link" to learn more. She finds herself on a page with a gallery of animations that she browses. ...
+
+--------------------------------------------------------------------------------
+
+## 29. Título no disponible
+
+This panel consists of faculty who jointly worked on a collaborative project connected to an NSF-sponsored interdisciplinary initiative called "Piloting Pathways for Computational Thinking in the Curriculum." Faculty at Towson University from Computer ...
+
+--------------------------------------------------------------------------------
+
+## 30. Título no disponible
+
+In an influential 2006 article, Jeanette Wing called for the elaboration of an approach to "computational thinking." Wing argued that computational thinking expresses the importance of computer science to general education, and provides a basis for ...
+
+--------------------------------------------------------------------------------
+
+## 31. Título no disponible
+
+This paper describes "Computational Thinking for the Sciences", a 3-day summer workshop for high school science and mathematics teachers. Our workshop emphasizes the deep connections between the natural sciences, mathematics and computer science through ...
+
+--------------------------------------------------------------------------------
+
+## 32. Título no disponible
+
+If we are not careful, our fascination with "computational thinking" may lead us back into the trap we are trying to escape.
+
+--------------------------------------------------------------------------------
+
+## 33. Título no disponible
+
+We describe an innovative educational system designed to, firstly, motivate young people to engage with computational concepts and secondly, provide them with tools to do so in an embodied manner. The interface is designed as a "magic mirror" in which ...
+
+--------------------------------------------------------------------------------
+
+## 34. Título no disponible
+
+We report the status of the pre-experimental phase of a project called "Combining Computational Thinking Didactics and Software Engineering in K-12" (COCONATS), which aims at combining computational thinking and software engineering didactics in order ...
+
+--------------------------------------------------------------------------------
+
+## 35. Título no disponible
+
+The increased interest in promoting CS education for all has been coalescing around the idea of "computational thinking." Several framings for promoting computational thinking in K-12 education have been proposed by practitioners and researchers that ...
+
+--------------------------------------------------------------------------------
+
+## 36. Título no disponible
+
+The creation of computer science tutorials is becoming critically important as hundreds of millions of students each year get their first CS experience through self-directed online activities. Creating a "cliffhanger" activity, with high engagement ...
+
+--------------------------------------------------------------------------------
+
+## 37. Título no disponible
+
+Conventionally creativity is often conceived as an aptitude to be discovered in an individual that cannot be mathematically measured. But the concept of creative thinking as a divergence from a standard "norm" is used in creativity research for the ...
+
+--------------------------------------------------------------------------------
+
+## 38. Título no disponible
+
+In recent years, the field of education has challenged researchers and practitioners to incorporate computing as an essential focus of K12 STEM education. Widely recognized as a "basic skill" necessary for economic opportunity and social mobility, ...
+
+--------------------------------------------------------------------------------
+
+## 39. Título no disponible
+
+This paper describes the implementation of information technology problem-solving constructs and scenarios designed to cultivate computational thinking in information technology education at the college level via a course entitled "IT Problem Solving." ...
+
+--------------------------------------------------------------------------------
+
+## 40. Título no disponible
+
+In this conceptual paper, we argue that recent developments in K-12 programming education are suggestive of what can be called a "social turn", a shift in the field in which learning to code has shifted from being a predominantly individualistic and ...
+
+--------------------------------------------------------------------------------
+
+## 41. Título no disponible
+
+Math on a Sphere (MoS) is a newly developed Web-based environment that enables children to imagine, program, and share creative designs on a public spherical display, the "Science on a Sphere" system created by the National Oceanic and Atmospheric ...
+
+--------------------------------------------------------------------------------
+
+## 42. Título no disponible
+
+This poster describes the "Computer Science for All Bulldogs (CS4ALL-B) pilot, a 7-week long course taught in Fall 2013 at Opelika Middle School, located in the Auburn- Opelika, Alabama Metropolitan Area (https://cs4allb.eng.auburn.edu). The program ...
+
+--------------------------------------------------------------------------------
+
+## 43. Título no disponible
+
+In this paper, we present the design of a "CS0" Computational Thinking course at an Australian regional university, that is also offered to non-enrolled students via the Open Universities Australia network. Unlike many CS0 courses, this targets a ...
+
+--------------------------------------------------------------------------------
+
+## 44. Título no disponible
+
+This paper describes an educational tool developed to teach coding and computational thinking to children. We designed and implemented an adaptive, interactive learning game application (mobile and web) called "Pixasso". In this application, children ...
+
+--------------------------------------------------------------------------------
+
+## 45. Título no disponible
+
+In response to the shortcomings of the SPOC course "Introduction to Computational Thinking" at Beijing University of Civil Engineering and Architecture, the teaching team has transformed and improved the course design and practice based on the existing ...
+
+--------------------------------------------------------------------------------
+
+## 46. Título no disponible
+
+During COVID-19, undergraduate students in the urban college in New York City lost opportunities for almost all co-curricular informal learning outside the classroom. This paper describes the design, implementation, and preliminary evaluation of an "...
+
+--------------------------------------------------------------------------------
+
+## 47. Título no disponible
+
+The Italian Ministry of Education is promoting the introduction of coding and computational thinking at compulsory school level. One of the research initiatives being taken in this regard is "Programming to Learn in Italian Primary School". The project'...
+
+--------------------------------------------------------------------------------
+
+## 48. The "Making at School" Project: Planning Interdisciplinary Activities
+
+"Making" as a "do-it-yourself" and tinker mentality provides motivating and interdisciplinary ways to experiment and fosters transversal competences such as computational thinking skills. The joint innovation project "Making at School" (https://explore-...
+
+--------------------------------------------------------------------------------
+
+## 49. Título no disponible
+
+Many K-12 educators who are new to computer science (CS) may have a lack of confidence or sense of intimidation when starting their CS teaching journey. To mitigate this, Massachusetts DESE contracted CSforMA to create a three-day "Introduction to ...
+
+--------------------------------------------------------------------------------
+
+## 50. Título no disponible
+
+This document briefly explains the context, motivations, background and research design of a PhD project titled "Developing Teachers as Computational Participants". This PhD project will explore how Australian Primary School teachers learn and teach the ...
+
+--------------------------------------------------------------------------------
+
+## 51. Título no disponible
+
+Computing is a large and growing presence in society in 2020, and like many others, we see a strong demand from non-computing majors for "CS For All" courses. Unlike many others, we do not feel that putting traditional programming first is the best way ...
+
+--------------------------------------------------------------------------------
+
+## 52. Título no disponible
+
+As computer science education is incorporated into the United States educational system, it is imperative that children, educators, and caregivers understand the requisite competencies called "computational thinking" (CT). CT has advanced since first ...
+
+--------------------------------------------------------------------------------
+
+## 53. Título no disponible
+
+The DIVAS (Digital Imaging and Vision Applications in Science) project addresses workforce challenges in science, technology, engineering, and mathematics by creating a pedagogical and programmatic "on-ramp" that empowers natural science majors to ...
+
+--------------------------------------------------------------------------------
+
+## 54. Título no disponible
+
+Many arguments are used to advocate for the introduction of Computer Science (CS) / Computational Thinking / "coding" in K-12 education. Growth mindset theory (GM) is also becoming very popular among educators and researchers. Some claims stating that ...
+
+--------------------------------------------------------------------------------
+
+## 55. Título no disponible
+
+This paper reports on a systematic method used to improve an existing unit of instruction. The method is distinctive in combining steps of instructional design with "knowledge components" from a cognitively-based framework of learning. Instructional ...
+
+--------------------------------------------------------------------------------
+
+## 56. Título no disponible
+
+Since long before President Obama's call for "Computer Science for All" (\#CSforAll) in January 2016, momentum has been building to bring computing education to more people, and to be inclusive and equitable in these efforts. But now seems to be a key ...
+
+--------------------------------------------------------------------------------
+
+## 57. Título no disponible
+
+Engaging Computer Science in Traditional Education (ECSITE, pronounced "excite") is a 5-year program that began in 2009 to bring computer science into traditional K-12 classrooms. Rather than seeking to draw students into computing courses, we bring ...
+
+--------------------------------------------------------------------------------
+
+## 58. Título no disponible
+
+Computational Thinking (CT) has been articulated as a "fundamental skill for everyone, not just for computer scientists" [10]. Almost all agree with the lofty goals of the initiative, to teach humanity the ability to see the world through the sharpened ...
+
+--------------------------------------------------------------------------------
+
+## 59. Título no disponible
+
+This paper presents an analytical case study using the "Computational Making" framework to critique three LEGO sets. These sets were marketed towards girls and focus on making. Our contribution is showing computational making can be used to investigate ...
+
+--------------------------------------------------------------------------------
+
+## 60. Título no disponible
+
+Since 2008, NSF and The College Board, have been developing a "Computer Science: Principles" curriculum to "introduce students to the central ideas of computing and CS, to instill ideas and practices of computational thinking, and to have students ...
+
+--------------------------------------------------------------------------------
+
+## 61. Título no disponible
+
+The inventors of the term "computer science" meant for it to be something that was taught to everyone, to facilitate learning other subjects, and to help people understand the risks of technology in their lives. Alan Perlis (with Newell and Simon) ...
+
+--------------------------------------------------------------------------------
+
+## 62. Título no disponible
+
+Understanding processes of evolution and natural selection is both important and challenging for learners. We describe a "codefirst" learning environment called Frog Pond designed to introduce natural selection to elementary and middle school aged ...
+
+--------------------------------------------------------------------------------
+
+## 63. Título no disponible
+
+In the race to teach programming to large, diverse audiences, low-level topics have received short shrift. We address this gap by presenting two ("10") games we have designed - one a card game, the other an online game - to help students learn both ...
+
+--------------------------------------------------------------------------------
+
+## 64. Título no disponible
+
+RoboScape Online is a robotics simulation platform designed to reduce the barriers to entry for teachers to use robots as an educational tool in their classrooms. With simulated robots in a shared virtual 3D environment, students can be provided with "...
+
+--------------------------------------------------------------------------------
+
+## 65. Título no disponible
+
+In this paper, we present an iteration on a "reconstruction kit" for e-textiles, a flexible-state construction kit that allows for rapid deconstruction and reconstruction of sewn, programmable circuits. The reconstruction kit was redesigned to be more ...
+
+--------------------------------------------------------------------------------
+
+## 66. Título no disponible
+
+A significant consequence of the phenomenal success of block-based languages such as Scratch in introducing novices to computer programming, coupled with the fact that "real world" programming is generally performed via textual languages, has been that ...
+
+--------------------------------------------------------------------------------
+
+## 67. Título no disponible
+
+Phenomenographic studies in computing education research have previously focused on learning "programming thinking" [3], the act of learning to program [2], and conceptions of learning generally in an engineering context [10]. In the present study we ...
+
+--------------------------------------------------------------------------------
+
+## 68. The baffling CS notions of "as-if" and "don't-care"
+
+The notions of "as if" and "don't care" are essential notions in computational thinking. The former appears in the reformulation of tasks, reduction between tasks, auxiliary variables, and more. The latter is the core of non-determinism, asynchronous ...
+
+--------------------------------------------------------------------------------
+
+## 69. Título no disponible
+
+Over the past 10 or 20 years, the subject of machine organization and system architecture has been deemphasized in favor of the powerful abstractions that support computational thinking. We have grown accustomed to slogans like "computing is bits, not ...
+
+--------------------------------------------------------------------------------
+
+## 70. Título no disponible
+
+"Objects-first" is a popular teaching approach in CS1/2 courses, particularly those designed around the Java programming language. Recently, theory-based criticisms of this approach have been used at some noteworthy universities to justify delaying ...
+
+--------------------------------------------------------------------------------
+
+## 71. Título no disponible
+
+Drawing on Mishra and Koehler's "TPACK" model [1], we recognize that great Computer Science (CS) teaching demands great pedagogy, great technology skills and great subject knowledge. The main challenge facing any jurisdiction in implementing a CS ...
+
+--------------------------------------------------------------------------------
+
+## 72. The "How-To" as a Post-AI Assessment Tool
+
+This paper introduces a simple but innovative assignment technique, the "How-To" as a way to simplify the relationship with AI in assessment events. As an assignment, the "How-To" guide merges reflective practice with technical skill development in ...
+
+--------------------------------------------------------------------------------
+
+## 73. Título no disponible
+
+Ponder means "to weigh in the mind with thoroughness and care" [31]. Pander means "to cater to the weaknesses and base desires of others" [31]. We report on a course we have designed and delivered over a six year period. The course was originally ...
+
+--------------------------------------------------------------------------------
+
+## 74. Título no disponible
+
+In this paper, we present the development of a "reconstruction kit" for e-textiles, which transforms fixed-state construction kits---maker tools and technologies that focus on the creation of semi-permanent projects---into flex-state construction kits ...
+
+--------------------------------------------------------------------------------
+
+## 75. Título no disponible
+
+"Assessing Design Thinking (DT) Proficiency Through Critical Incident Technique" employs a Criterion-referenced framework, C-K theory, and Functional-Behavior-Structure Ontology to assess proficiency in visual design, technical design, and cognitive task ...
+
+--------------------------------------------------------------------------------
+
+## 76. Título no disponible
+
+Teaching programming as a way to express ideas, communicate with others, and understand our world is one of the oldest goals for computing education. The inventor of the term "computer science" saw it as the third leg of STEM literacy. In this talk, I ...
+
+--------------------------------------------------------------------------------
+
+## 77. Título no disponible
+
+While a number of recent efforts have explored the use of "cloud offload" to enable deep learning on IoT devices, these have not assumed the use of duty-cycled radios like BLE. We argue that radio duty-cycling significantly diminishes the performance ...
+
+--------------------------------------------------------------------------------
+
+## 78. Título no disponible
+
+Students in introductory programming courses struggle with how to turn a problem statement into code. We introduce a teaching technique, "The Seven Steps," that provides structure and guidance on how to approach a problem. The first four steps focus on ...
+
+--------------------------------------------------------------------------------
+
+## 79. Título no disponible
+
+Tata Consultancy Services (TCS) in partnership with ACM India has been organizing the Bebras Challenge in India since 2018. To date, over 500,000 students have participated in the challenge. Tata Steel Foundation (TSF) initiated "The Thousand Schools ...
+
+--------------------------------------------------------------------------------
+
+## 80. Título no disponible
+
+We present the design of Note Code -- a music programming puzzle game designed as a tangible device coupled with a Graphical User Interface (GUI). Tapping patterns and placing boxes in proximity enables programming these "note-boxes" to store sets of ...
+
+--------------------------------------------------------------------------------
+
+## 81. Título no disponible
+
+Currently, in the field of education, a multidisciplinary approach called STEM (Science, Technology, Engineering, and Mathematics) has emerged, which has been complemented by the culture of "doing", known as the Maker Movement. As a result of this ...
+
+--------------------------------------------------------------------------------
+
+## 82. Título no disponible
+
+Illusion-knit fabrics reveal distinct patterns or images depending on the viewing angle. Artists have manually achieved this effect by exploiting "microgeometry," i.e., small differences in stitch heights. However, past work in computational 3D knitting ...
+
+--------------------------------------------------------------------------------
+
