@@ -25,28 +25,8 @@ def main():
     os.makedirs(raw_data_path, exist_ok=True)
     os.makedirs(processed_data_path, exist_ok=True)
 
-    # Fetch data from ScienceDirect (ahora primero)
-    sciencedirect_pages = 30  # Número de páginas a extraer de ScienceDirect
-    print(f"\n=== Iniciando extracción de {sciencedirect_pages} páginas de ScienceDirect ===")
-    sciencedirect_data = fetch_data_from_sciencedirect(sciencedirect_pages)
-
-    # Save raw ScienceDirect data
-    sciencedirect_raw_file = os.path.join(raw_data_path, 'sciencedirect_data.bib')
-    save_to_bibtex(sciencedirect_data, sciencedirect_raw_file)
-    print(f"Datos sin procesar de ScienceDirect guardados en: {sciencedirect_raw_file}")
-
-    # Fetch data from ACM (ahora segundo)
-    acm_pages = 30  # Número de páginas a extraer de ACM
-    print(f"\n=== Iniciando extracción de {acm_pages} páginas de ACM Digital Library ===")
-    acm_data = fetch_data_from_acm(acm_pages)
-
-    # Save raw ACM data
-    acm_raw_file = os.path.join(raw_data_path, 'acm_data.bib')
-    save_to_bibtex(acm_data, acm_raw_file)
-    print(f"Datos sin procesar de ACM guardados en: {acm_raw_file}")
-
     # Fetch data from IEEE (ahora tercero)
-    ieee_pages = 30  # Número de páginas a extraer de IEEE
+    ieee_pages = 2  # Número de páginas a extraer de IEEE
     print(f"\n=== Iniciando extracción de {ieee_pages} páginas de IEEE Xplore ===")
     ieee_data = fetch_data_from_ieee(ieee_pages)
 
@@ -56,7 +36,7 @@ def main():
     print(f"Datos sin procesar de IEEE guardados en: {ieee_raw_file}")
 
     # Combine data from all sources (mismo orden que la extracción)
-    combined_data = sciencedirect_data + acm_data + ieee_data
+    combined_data =  ieee_data
 
     # Remove duplicates and save unique entries
     unique_file_path = os.path.join(processed_data_path, 'unique_entries.bib')

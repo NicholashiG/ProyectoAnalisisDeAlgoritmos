@@ -1,0 +1,62 @@
+[
+    {
+        "Método de ordenamiento": "TimSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.06985664367675781
+    },
+    {
+        "Método de ordenamiento": "CombSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.060558319091796875
+    },
+    {
+        "Método de ordenamiento": "SelectionSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.133514404296875
+    },
+    {
+        "Método de ordenamiento": "TreeSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.14448165893554688
+    },
+    {
+        "Método de ordenamiento": "PigeonholeSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.04124641418457031
+    },
+    {
+        "Método de ordenamiento": "BucketSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.12135505676269531
+    },
+    {
+        "Método de ordenamiento": "QuickSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.1385211944580078
+    },
+    {
+        "Método de ordenamiento": "HeapSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.1468658447265625
+    },
+    {
+        "Método de ordenamiento": "BitonicSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.3376007080078125
+    },
+    {
+        "Método de ordenamiento": "GnomeSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.3657341003417969
+    },
+    {
+        "Método de ordenamiento": "BinaryInsertionSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 0.10538101196289062
+    },
+    {
+        "Método de ordenamiento": "RadixSort",
+        "Tamaño": 50,
+        "Tiempo (ms)": 3.0045509338378906
+    }
+]
