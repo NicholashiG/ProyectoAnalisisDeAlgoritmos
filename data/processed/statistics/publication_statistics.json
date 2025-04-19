@@ -1,0 +1,434 @@
+{
+    "total_entries": 12301,
+    "top_authors": [
+        [
+            "Biswas, Gautam",
+            40
+        ],
+        [
+            "Wilensky, Uri",
+            33
+        ],
+        [
+            "",
+            31
+        ],
+        [
+            "Looi, Chee-Kit",
+            29
+        ],
+        [
+            "Hsu, Ting-Chia",
+            28
+        ],
+        [
+            "Sabitzer, Barbara",
+            23
+        ],
+        [
+            "Basu, Satabdi",
+            23
+        ],
+        [
+            "Wong, Gary K. W.",
+            22
+        ],
+        [
+            "Yadav, Aman",
+            22
+        ],
+        [
+            "Robles, Gregorio",
+            21
+        ],
+        [
+            "Repenning, Alexander",
+            20
+        ],
+        [
+            "Weintrop, David",
+            20
+        ],
+        [
+            "Horn, Michael",
+            19
+        ],
+        [
+            "Grover, Shuchi",
+            19
+        ],
+        [
+            "Dagienė, Valentina",
+            18
+        ]
+    ],
+    "publications_by_type_year": {
+        "2022": {
+            "inproceedings": 285,
+            "article": 882,
+            "conference": 134,
+            "book": 46,
+            "inbook": 16,
+            "incollection": 5
+        },
+        "2023": {
+            "article": 1126,
+            "inproceedings": 358,
+            "inbook": 14,
+            "conference": 138,
+            "incollection": 32,
+            "book": 35
+        },
+        "2002": {
+            "inproceedings": 16,
+            "article": 7
+        },
+        "2024": {
+            "article": 1160,
+            "inproceedings": 185,
+            "inbook": 2,
+            "conference": 40,
+            "incollection": 14,
+            "book": 23
+        },
+        "2018": {
+            "inproceedings": 202,
+            "article": 459,
+            "conference": 103,
+            "inbook": 2,
+            "book": 25,
+            "incollection": 2
+        },
+        "2021": {
+            "article": 831,
+            "inbook": 3,
+            "conference": 147,
+            "inproceedings": 297,
+            "book": 53,
+            "incollection": 6
+        },
+        "1986": {
+            "inproceedings": 1,
+            "incollection": 1,
+            "article": 1
+        },
+        "1977": {
+            "article": 1
+        },
+        "2003": {
+            "inproceedings": 33,
+            "article": 7
+        },
+        "2004": {
+            "article": 8,
+            "inproceedings": 26
+        },
+        "1993": {
+            "inproceedings": 4,
+            "article": 6,
+            "inbook": 1
+        },
+        "1990": {
+            "inproceedings": 2,
+            "article": 1
+        },
+        "1995": {
+            "inproceedings": 7,
+            "article": 3,
+            "inbook": 1
+        },
+        "2005": {
+            "article": 13,
+            "inproceedings": 35
+        },
+        "1997": {
+            "inproceedings": 16,
+            "article": 5
+        },
+        "2006": {
+            "inproceedings": 44,
+            "article": 11,
+            "book": 1
+        },
+        "1991": {
+            "inproceedings": 3,
+            "article": 4
+        },
+        "1981": {
+            "article": 1,
+            "inproceedings": 1
+        },
+        "1988": {
+            "inproceedings": 5,
+            "article": 1
+        },
+        "1994": {
+            "article": 4,
+            "inproceedings": 6,
+            "incollection": 2
+        },
+        "2007": {
+            "article": 26,
+            "conference": 4,
+            "inproceedings": 45
+        },
+        "2008": {
+            "article": 28,
+            "inproceedings": 85,
+            "book": 1,
+            "conference": 5
+        },
+        "2009": {
+            "conference": 5,
+            "article": 50,
+            "inproceedings": 126,
+            "book": 1
+        },
+        "2010": {
+            "conference": 17,
+            "article": 61,
+            "inproceedings": 150,
+            "book": 1
+        },
+        "2011": {
+            "conference": 19,
+            "article": 74,
+            "inproceedings": 145
+        },
+        "2012": {
+            "conference": 19,
+            "article": 73,
+            "inproceedings": 98,
+            "incollection": 1
+        },
+        "2013": {
+            "conference": 32,
+            "article": 124,
+            "incollection": 4,
+            "inproceedings": 111,
+            "book": 4
+        },
+        "2014": {
+            "conference": 25,
+            "article": 160,
+            "inproceedings": 133,
+            "book": 10,
+            "incollection": 1
+        },
+        "2015": {
+            "conference": 35,
+            "article": 191,
+            "inproceedings": 157,
+            "book": 7,
+            "incollection": 1
+        },
+        "2016": {
+            "conference": 45,
+            "article": 250,
+            "inproceedings": 158,
+            "book": 15,
+            "incollection": 1
+        },
+        "2017": {
+            "conference": 104,
+            "article": 361,
+            "book": 17,
+            "inproceedings": 171,
+            "inbook": 1,
+            "incollection": 5
+        },
+        "2019": {
+            "conference": 181,
+            "article": 591,
+            "inbook": 3,
+            "inproceedings": 209,
+            "book": 13,
+            "incollection": 4
+        },
+        "2020": {
+            "conference": 163,
+            "article": 672,
+            "inproceedings": 220,
+            "inbook": 4,
+            "book": 18,
+            "incollection": 4
+        },
+        "1992": {
+            "inproceedings": 7,
+            "article": 2
+        },
+        "1989": {
+            "inproceedings": 3,
+            "article": 1
+        },
+        "1978": {
+            "inproceedings": 1
+        },
+        "1996": {
+            "article": 5,
+            "inproceedings": 9,
+            "inbook": 1,
+            "incollection": 1
+        },
+        "1987": {
+            "article": 2,
+            "inproceedings": 1
+        },
+        "1967": {
+            "article": 1
+        },
+        "1974": {
+            "article": 1
+        },
+        "1976": {
+            "article": 1
+        },
+        "1998": {
+            "inproceedings": 15,
+            "article": 7
+        },
+        "1999": {
+            "inproceedings": 8,
+            "article": 2
+        },
+        "2000": {
+            "article": 1,
+            "inproceedings": 4
+        },
+        "2001": {
+            "article": 7,
+            "inproceedings": 14
+        },
+        "2025": {
+            "article": 63,
+            "incollection": 1
+        },
+        "Unknown": {
+            "article": 1
+        }
+    },
+    "top_journals": [
+        [
+            "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+            222
+        ],
+        [
+            "IEEE Access",
+            205
+        ],
+        [
+            "Proceedings of International Conference on Computational Thinking Education",
+            200
+        ],
+        [
+            "Journal of Educational Computing Research",
+            142
+        ],
+        [
+            "ASEE Annual Conference and Exposition, Conference Proceedings",
+            127
+        ],
+        [
+            "Computers & Education",
+            118
+        ],
+        [
+            "Education and Information Technologies",
+            116
+        ],
+        [
+            "International Journal of Child-Computer Interaction",
+            107
+        ],
+        [
+            "Computer Science Education",
+            106
+        ],
+        [
+            "ACM International Conference Proceeding Series",
+            91
+        ],
+        [
+            "Interactive Learning Environments",
+            89
+        ],
+        [
+            "Communications in Computer and Information Science",
+            83
+        ],
+        [
+            "Thinking Skills and Creativity",
+            64
+        ],
+        [
+            "Journal of Research on Technology in Education",
+            60
+        ],
+        [
+            "Proceedings of International Conference of the Learning Sciences, ICLS",
+            57
+        ]
+    ],
+    "top_publishers": [
+        [
+            "Routledge",
+            971
+        ],
+        [
+            "Springer Science and Business Media Deutschland GmbH",
+            337
+        ],
+        [
+            "Springer",
+            261
+        ],
+        [
+            "The Education University of Hong Kong",
+            200
+        ],
+        [
+            "Association for Computing Machinery",
+            140
+        ],
+        [
+            "American Society for Engineering Education",
+            131
+        ],
+        [
+            "Springer Verlag",
+            129
+        ],
+        [
+            "IGI Global",
+            109
+        ],
+        [
+            "International Society of the Learning Sciences (ISLS)",
+            101
+        ],
+        [
+            "Taylor \\& Francis",
+            87
+        ],
+        [
+            "John Wiley and Sons Inc",
+            86
+        ],
+        [
+            "Springer Science and Business Media B.V.",
+            75
+        ],
+        [
+            "Asia-Pacific Society for Computers in Education",
+            74
+        ],
+        [
+            "MDPI",
+            69
+        ],
+        [
+            "CEUR-WS",
+            55
+        ]
+    ]
+}

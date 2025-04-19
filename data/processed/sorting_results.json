@@ -2,61 +2,61 @@
     {
         "Método de ordenamiento": "TimSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 47.30987548828125
+        "Tiempo (ms)": 47.548770904541016
     },
     {
         "Método de ordenamiento": "CombSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 100.06427764892578
+        "Tiempo (ms)": 83.33086967468262
     },
     {
         "Método de ordenamiento": "SelectionSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 5205.132246017456
+        "Tiempo (ms)": 5025.37202835083
     },
     {
         "Método de ordenamiento": "TreeSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 32.93204307556152
+        "Tiempo (ms)": 25.307178497314453
     },
     {
         "Método de ordenamiento": "PigeonholeSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 9.89985466003418
+        "Tiempo (ms)": 6.572961807250977
     },
     {
         "Método de ordenamiento": "BucketSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 4596.057415008545
+        "Tiempo (ms)": 4089.169979095459
     },
     {
         "Método de ordenamiento": "QuickSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 36.09323501586914
+        "Tiempo (ms)": 31.05020523071289
     },
     {
         "Método de ordenamiento": "HeapSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 57.03425407409668
+        "Tiempo (ms)": 47.818899154663086
     },
     {
         "Método de ordenamiento": "BitonicSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 141.01696014404297
+        "Tiempo (ms)": 123.09527397155762
     },
     {
         "Método de ordenamiento": "GnomeSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 16187.102556228638
+        "Tiempo (ms)": 13482.166528701782
     },
     {
         "Método de ordenamiento": "BinaryInsertionSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 2630.858898162842
+        "Tiempo (ms)": 2201.984405517578
     },
     {
         "Método de ordenamiento": "RadixSort",
         "Tamaño": 12295,
-        "Tiempo (ms)": 594.536304473877
+        "Tiempo (ms)": 663.1906032562256
     }
 ]
