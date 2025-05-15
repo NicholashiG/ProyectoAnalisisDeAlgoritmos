@@ -9,6 +9,9 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from wordcloud import WordCloud
+import sys
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+from src.clustering.abstract_extractor import AbstractExtractor
 import networkx as nx
 from tqdm import tqdm
 
@@ -16,10 +19,46 @@ from tqdm import tqdm
 os.makedirs('data/word_freq_results/tablas', exist_ok=True)
 os.makedirs('data/word_freq_results/nubes_palabras', exist_ok=True)
 os.makedirs('data/word_freq_results/redes', exist_ok=True)
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_dir = os.path.join(base_dir, 'data')
+processed_dir = os.path.join(data_dir, 'processed')
+bibtex_path = os.path.join(processed_dir, 'unique_entries.bib')
+output_dir = os.path.join(data_dir, 'word_freq_results')
+
+
 
 # Descargar recursos NLTK necesarios
 nltk.download('punkt', quiet=True)
 nltk.download('wordnet', quiet=True)
+
+# Extraer abstracts
+print("Extrayendo abstracts del archivo BibTeX...")
+extractor = AbstractExtractor()
+all_abstracts, categories = extractor.extract_from_bibtex(bibtex_path)
+
+# Tomar una muestra para análisis (ajustar según capacidad computacional)
+sample_size = 5000
+abstracts = extractor.extract_sample(all_abstracts, max_samples=sample_size)
+
+# Documentos y sus IDs
+doc_ids = list(abstracts.keys())
+documents = [abstracts[doc_id] for doc_id in doc_ids]
+
+# Guardar los abstracts procesados
+print("Guardando abstracts procesados...")
+abstracts_output = []
+for i, doc_id in enumerate(doc_ids):
+    abstracts_output.append({
+        "doc_id": doc_id,
+        "abstract_original": abstracts[doc_id],
+    })
+
+# Guardar en formato JSON
+import json
+abstracts_processed_path = os.path.join(output_dir, 'processed_abstracts.json')
+with open(abstracts_processed_path, 'w', encoding='utf-8') as f:
+    json.dump(abstracts_output, f, indent=2, ensure_ascii=False)
+
 
 # Definir categorías y variables según las especificaciones
 categories = {
@@ -135,7 +174,7 @@ abstracts_processed = []
 
 # Intenta cargar desde el archivo principal
 try:
-    with open('data/clustering_results/processed_abstracts.json', 'r', encoding='utf-8') as file:
+    with open('data/word_freq_results/processed_abstracts.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
         
         # Manejo flexible para extraer abstracts según diferentes estructuras posibles
@@ -159,14 +198,14 @@ try:
                     if isinstance(item, dict) and 'abstract_original' in item:
                         abstracts_processed.append(item['abstract_original'])
     
-    print(f"Se cargaron {len(abstracts_processed)} abstracts procesados del archivo principal.")
+    print(f"Se cargaron {len(abstracts_processed)} abstracts del archivo principal.")
     
               
 except Exception as e:
     print(f"Error al cargar los abstracts: {e}")
     abstracts_processed = []  # Inicializar como lista vacía en caso de error
 
-print(f"Total de abstracts procesados: {len(abstracts_processed)}")
+print(f"Total de abstracts: {len(abstracts_processed)}")
 
 # Usar solo los abstracts procesados
 abstracts = abstracts_processed

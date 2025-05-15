@@ -1,9 +1,12 @@
 Variable,Frecuencia
-Functions,120
-Sequences,42
-Events,41
-Variables,40
-Directions,34
-Parallelism,26
-Loops,5
-Conditionals,3
+Functions,235
+Variables,111
+Directions,88
+Events,81
+Sequences,70
+Parallelism,50
+Loops,33
+Conditionals,14
+Control structures,6
+Modular structure,2
+Software/hardware,1
