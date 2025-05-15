@@ -13,9 +13,9 @@ import networkx as nx
 from tqdm import tqdm
 
 # Crear directorios para resultados
-os.makedirs('resultados/tablas', exist_ok=True)
-os.makedirs('resultados/nubes_palabras', exist_ok=True)
-os.makedirs('resultados/redes', exist_ok=True)
+os.makedirs('data/word_freq_results/tablas', exist_ok=True)
+os.makedirs('data/word_freq_results/nubes_palabras', exist_ok=True)
+os.makedirs('data/word_freq_results/redes', exist_ok=True)
 
 # Descargar recursos NLTK necesarios
 nltk.download('punkt', quiet=True)
@@ -280,18 +280,18 @@ for category, freq in frequencies.items():
         dfs[category] = df
         
         # Guardar como CSV
-        df.to_csv(f'resultados/tablas/{category.replace(" ", "_")}_frecuencias.csv', index=False)
+        df.to_csv(f'data/word_freq_results/tablas/{category.replace(" ", "_")}_frecuencias.csv', index=False)
 
 # Tabla resumen global
 all_df = pd.DataFrame(list(all_frequencies.items()), columns=['Variable', 'Frecuencia'])
 all_df = all_df.sort_values('Frecuencia', ascending=False)
-all_df.to_csv('resultados/tablas/todas_las_variables_frecuencias.csv', index=False)
+all_df.to_csv('data/word_freq_results/tablas/todas_las_variables_frecuencias.csv', index=False)
 
 # Guardar datos como JSON también
-with open('resultados/tablas/frecuencias_por_categoria.json', 'w', encoding='utf-8') as f:
+with open('data/word_freq_results/tablas/frecuencias_por_categoria.json', 'w', encoding='utf-8') as f:
     json.dump(frequencies, f, ensure_ascii=False, indent=4)
     
-with open('resultados/tablas/frecuencias_globales.json', 'w', encoding='utf-8') as f:
+with open('data/word_freq_results/tablas/frecuencias_globales.json', 'w', encoding='utf-8') as f:
     json.dump(all_frequencies, f, ensure_ascii=False, indent=4)
 
 # Definir la función para generar nubes de palabras
@@ -315,7 +315,7 @@ def generate_wordcloud(frequencies, title, filename):
     plt.axis('off')
     plt.title(title)
     plt.tight_layout()
-    plt.savefig(f'resultados/nubes_palabras/{filename}.png', dpi=300)
+    plt.savefig(f'data/word_freq_results/nubes_palabras/{filename}.png', dpi=300)
     plt.close()
 
 # Generar Nubes de Palabras
@@ -430,8 +430,7 @@ plt.legend(handles=legend_elements, loc='upper right', bbox_to_anchor=(1, 1),
 plt.axis('off')
 plt.title('Red de Co-ocurrencia de Variables', fontsize=16)
 plt.tight_layout()
-plt.savefig('resultados/redes/red_coocurrencia.png', dpi=300)
-plt.savefig('resultados/redes/red_coocurrencia.svg', format='svg')
+plt.savefig('data/word_freq_results/redes/red_coocurrencia.png', dpi=300)
 plt.close()
 
 # Generar versión simplificada (con menos nodos) para mejor visualización
@@ -492,8 +491,7 @@ if len(G.nodes()) > 30:
     plt.axis('off')
     plt.title('Red de Co-ocurrencia (30 términos más frecuentes)', fontsize=16)
     plt.tight_layout()
-    plt.savefig('resultados/redes/red_coocurrencia_simplificada.png', dpi=300)
-    plt.savefig('resultados/redes/red_coocurrencia_simplificada.svg', format='svg')
+    plt.savefig('data/word_freq_results/redes/red_coocurrencia_simplificada.png', dpi=300)
     plt.close()
 
 print("Análisis completado. Se generaron visualizaciones para TODAS las categorías.")

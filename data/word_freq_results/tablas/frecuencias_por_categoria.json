@@ -1,8 +1,8 @@
 {
     "Habilidades": {
-        "Logic": 82,
-        "Debug": 8,
-        "Algorithm": 377
+        "Logic": 182,
+        "Debug": 10,
+        "Algorithm": 679
     },
     "Conceptos computacionales": {},
     "Actitudes": {},
@@ -11,16 +11,17 @@
     "Diseño de investigación": {},
     "Nivel de escolaridad": {},
     "Medio": {
-        "STEM": 110,
+        "STEM": 126,
         "Programming": 1,
-        "Spreadsheet": 1
+        "Spreadsheet": 6,
+        "Robotics": 1
     },
     "Estrategia": {},
     "Herramienta": {
         "Arduino": 16,
         "Minecraft": 3,
-        "Scratch": 33,
-        "Mimo": 3,
+        "Scratch": 50,
+        "Mimo": 4,
         "Codecombat": 4
     }
 }

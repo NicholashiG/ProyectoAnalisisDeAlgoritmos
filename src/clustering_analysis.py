@@ -34,7 +34,7 @@ def main():
     all_abstracts, categories = extractor.extract_from_bibtex(bibtex_path)
     
     # Tomar una muestra para análisis (ajustar según capacidad computacional)
-    sample_size = 1000
+    sample_size = 2000
     abstracts = extractor.extract_sample(all_abstracts, max_samples=sample_size)
     
     # Preprocesar abstracts
