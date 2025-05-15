@@ -1,27 +1,80 @@
 {
     "Habilidades": {
-        "Logic": 182,
-        "Debug": 10,
-        "Algorithm": 679
+        "Logic": 100,
+        "Abstraction": 67,
+        "Evaluation": 264,
+        "Algorithm": 377,
+        "Coding": 76,
+        "Collaboration": 70,
+        "Problem solving": 104,
+        "Creativity": 156,
+        "Algorithmic thinking": 19,
+        "Critical thinking": 64,
+        "Generalization": 27,
+        "Logical thinking": 12,
+        "Decomposition": 23,
+        "Cooperation": 28,
+        "Modularity": 5
     },
-    "Conceptos computacionales": {},
-    "Actitudes": {},
-    "Propiedades psicométricas": {},
-    "Herramientas de evaluación": {},
-    "Diseño de investigación": {},
+    "Conceptos computacionales": {
+        "Functions": 120,
+        "Sequences": 42,
+        "Parallelism": 26,
+        "Events": 41,
+        "Directions": 34,
+        "Loops": 5,
+        "Variables": 40,
+        "Conditionals": 3
+    },
+    "Actitudes": {
+        "Emotional": 85,
+        "Engagement": 64,
+        "Motivation": 70,
+        "Perceptions": 33,
+        "Self‑efficacy": 23,
+        "Persistence": 8
+    },
+    "Propiedades psicométricas": {
+        "Validity": 28,
+        "Reliability": 53
+    },
+    "Herramientas de evaluación": {
+        "Computational Thinking Test": 2,
+        "Self‑efficacy scale": 2
+    },
+    "Diseño de investigación": {
+        "Experimental": 190,
+        "Pre‑test": 4,
+        "Post‑test": 5
+    },
     "Nivel de escolaridad": {},
     "Medio": {
-        "STEM": 126,
-        "Programming": 1,
-        "Spreadsheet": 6,
-        "Robotics": 1
+        "Programming": 535,
+        "STEM": 119,
+        "Robotics": 110,
+        "Block programming": 3,
+        "Unplugged activities": 2,
+        "Mobile application": 2,
+        "Spreadsheet": 3
     },
-    "Estrategia": {},
+    "Estrategia": {
+        "Gamification": 15,
+        "Project‑based learning": 17,
+        "Game‑based learning": 21,
+        "Flipped classroom": 9,
+        "Collaborative learning": 9,
+        "Inquiry‑based learning": 8,
+        "Problem‑based learning": 7,
+        "Personalized learning": 8,
+        "Cooperative learning": 1
+    },
     "Herramienta": {
-        "Arduino": 16,
+        "Arduino": 14,
         "Minecraft": 3,
-        "Scratch": 50,
+        "Scratch": 45,
+        "Code.org": 2,
         "Mimo": 4,
-        "Codecombat": 4
+        "Codecombat": 4,
+        "Alice": 10
     }
 }

@@ -141,8 +141,8 @@ try:
         # Manejo flexible para extraer abstracts según diferentes estructuras posibles
         if isinstance(data, list):
             for item in data:
-                if isinstance(item, dict) and 'abstract_processed' in item:
-                    abstracts_processed.append(item['abstract_processed'])
+                if isinstance(item, dict) and 'abstract_original' in item:
+                    abstracts_processed.append(item['abstract_original'])
                 elif isinstance(item, dict) and 'processed_text' in item:
                     abstracts_processed.append(item['processed_text'])
                 elif isinstance(item, str):
@@ -150,80 +150,21 @@ try:
         elif isinstance(data, dict):
             if 'abstracts' in data and isinstance(data['abstracts'], list):
                 for item in data['abstracts']:
-                    if isinstance(item, dict) and 'abstract_processed' in item:
-                        abstracts_processed.append(item['abstract_processed'])
+                    if isinstance(item, dict) and 'abstract_original' in item:
+                        abstracts_processed.append(item['abstract_original'])
                     elif isinstance(item, str):
                         abstracts_processed.append(item)
             elif 'documents' in data and isinstance(data['documents'], list):
                 for item in data['documents']:
-                    if isinstance(item, dict) and 'abstract_processed' in item:
-                        abstracts_processed.append(item['abstract_processed'])
+                    if isinstance(item, dict) and 'abstract_original' in item:
+                        abstracts_processed.append(item['abstract_original'])
     
     print(f"Se cargaron {len(abstracts_processed)} abstracts procesados del archivo principal.")
     
-    # Si se cargaron muy pocos abstracts, intentar buscar en otras ubicaciones
-    if len(abstracts_processed) < 10:
-        print("Se encontraron pocos abstracts. Intentando buscar en directorios adicionales...")
-        
-        # Buscar en directory data y subdirectorios para otros archivos JSON
-        for root, dirs, files in os.walk("data"):
-            for file in files:
-                if file.endswith(".json") and "abstract" in file.lower() and not file.endswith("processed_abstracts.json"):
-                    try:
-                        with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
-                            more_data = json.load(f)
-                            
-                            # Intenta extraer abstracts de este archivo
-                            if isinstance(more_data, list):
-                                for item in more_data:
-                                    if isinstance(item, dict) and ('abstract' in item or 'abstract_processed' in item):
-                                        if 'abstract_processed' in item:
-                                            abstracts_processed.append(item['abstract_processed'])
-                                        else:
-                                            # Si solo tiene abstract original, lo procesamos
-                                            text = item['abstract'].lower()
-                                            text = re.sub(r'[^\w\s-]', ' ', text)
-                                            text = re.sub(r'\s+', ' ', text).strip()
-                                            abstracts_processed.append(text)
-                        
-                        print(f"Archivo adicional encontrado: {file}, se añadieron más abstracts.")
-                    except Exception as e:
-                        print(f"Error al procesar archivo adicional {file}: {e}")
-                        
+              
 except Exception as e:
     print(f"Error al cargar los abstracts: {e}")
     abstracts_processed = []  # Inicializar como lista vacía en caso de error
-
-# Si después de intentar cargar más datos, sigue habiendo pocos abstracts, generar datos de prueba
-# para asegurar que se puedan generar las visualizaciones
-if len(abstracts_processed) < 20:
-    print("Generando datos de prueba para asegurar visualizaciones...")
-    test_abstracts = []
-    
-    # Crear abstracts sintéticos que incluyan todas las categorías y términos
-    for category, terms in categories.items():
-        for term in terms:
-            # Crear un abstract que contenga este término y algunos otros aleatorios
-            synthetic_abstract = f"This is a test abstract about {term}. "
-            synthetic_abstract += "It also mentions "
-            
-            # Añadir términos aleatorios de otras categorías
-            for other_category, other_terms in categories.items():
-                if other_category != category:
-                    random_term = np.random.choice(other_terms)
-                    synthetic_abstract += f"{random_term}, "
-            
-            synthetic_abstract += "and other related concepts."
-            
-            # Preprocesarlo como si fuera un abstract real
-            processed = synthetic_abstract.lower()
-            processed = re.sub(r'[^\w\s-]', ' ', processed)
-            processed = re.sub(r'\s+', ' ', processed).strip()
-            
-            test_abstracts.append(processed)
-    
-    abstracts_processed.extend(test_abstracts)
-    print(f"Se añadieron {len(test_abstracts)} abstracts de prueba para completar el conjunto de datos.")
 
 print(f"Total de abstracts procesados: {len(abstracts_processed)}")
 
@@ -320,15 +261,6 @@ def generate_wordcloud(frequencies, title, filename):
 
 # Generar Nubes de Palabras
 print("Generando nubes de palabras para todas las categorías...")
-
-# Si alguna categoría no tiene datos, generar datos sintéticos mínimos para visualización
-for category in categories.keys():
-    if not frequencies[category]:
-        print(f"Generando datos mínimos para la categoría: {category}")
-        # Añadir al menos algunos términos con frecuencias pequeñas
-        for term in categories[category]:
-            frequencies[category][term] = 1
-            all_frequencies[term] = all_frequencies.get(term, 0) + 1
 
 # Generar nube de palabras para cada categoría, ahora asegurándonos que todas tengan datos
 for category in categories.keys():
