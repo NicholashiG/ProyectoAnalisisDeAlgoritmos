@@ -5,13 +5,13 @@
 
 ---
 
-### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 1: Unificación de Datos**  
+### ![Implementado](https://img.shields.io/badge/Estado-Implementado-brightgreen) **Requerimiento 1: Unificación de Datos**  
 - Generar un archivo unificado (RIS/BibTex) con los datos de diferentes bases, asegurando la eliminación de registros duplicados.  
 - Crear un archivo separado con los productos duplicados eliminados.  
 
 ---
 
-### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 2: Generación de Estadísticas**  
+### ![Implementado](https://img.shields.io/badge/Estado-Implementado-brightgreen) **Requerimiento 2: Generación de Estadísticas**  
 Desde el archivo unificado, calcular:  
 - 15 autores más citados  
 - Cantidad de publicaciones por tipo de producto y año  
@@ -27,7 +27,7 @@ Desde el archivo unificado, calcular:
 
 ---
 
-### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 4: Medición de Similitud de Abstracts**  
+### ![Implementado](https://img.shields.io/badge/Estado-Implementado-brightgreen) **Requerimiento 4: Medición de Similitud de Abstracts**  
 - Implementar al menos dos técnicas de similitud textual para agrupar artículos con contenido relacionado  
 
 ---
