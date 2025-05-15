@@ -1,5 +1,51 @@
 # Análisis de Algoritmia en el Contexto de la Bibliometría
 
+---
+# **Requerimientos del Proyecto y Estado**  
+
+---
+
+### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 1: Unificación de Datos**  
+- Generar un archivo unificado (RIS/BibTex) con los datos de diferentes bases, asegurando la eliminación de registros duplicados.  
+- Crear un archivo separado con los productos duplicados eliminados.  
+
+---
+
+### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 2: Generación de Estadísticas**  
+Desde el archivo unificado, calcular:  
+- 15 autores más citados  
+- Cantidad de publicaciones por tipo de producto y año  
+- 15 journals con más apariciones  
+- 15 publishers con más apariciones  
+
+---
+
+### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 3: Análisis de Frecuencia y Visualización**  
+- Determinar la frecuencia de aparición de palabras clave en los resúmenes  
+- Unificar sinónimos para un análisis coherente  
+- Generar nube de palabras y gráficos de co-word dentro de la aplicación  
+
+---
+
+### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 4: Medición de Similitud de Abstracts**  
+- Implementar al menos dos técnicas de similitud textual para agrupar artículos con contenido relacionado  
+
+---
+
+### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 5: Despliegue y Documentación**  
+- El proyecto debe estar desplegado con documentación técnica detallada  
+- Incluir un documento de diseño con arquitectura y detalles de implementación  
+- Justificar el uso de IA si se emplea  
+
+---
+
+### **Leyenda de Estados**  
+- ![Implementado](https://img.shields.io/badge/Estado-Implementado-brightgreen) Requerimiento completado  
+- ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) Requerimiento pendiente  
+
+
+---
+
 ## Universidad del Quindío  
 **Programa de Ingeniería de Sistemas y Computación**  
 **Materia: Análisis de Algoritmos**  
