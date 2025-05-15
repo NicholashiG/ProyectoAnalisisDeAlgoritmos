@@ -1,0 +1,26 @@
+{
+    "Habilidades": {
+        "Logic": 82,
+        "Debug": 8,
+        "Algorithm": 377
+    },
+    "Conceptos computacionales": {},
+    "Actitudes": {},
+    "Propiedades psicométricas": {},
+    "Herramientas de evaluación": {},
+    "Diseño de investigación": {},
+    "Nivel de escolaridad": {},
+    "Medio": {
+        "STEM": 110,
+        "Programming": 1,
+        "Spreadsheet": 1
+    },
+    "Estrategia": {},
+    "Herramienta": {
+        "Arduino": 16,
+        "Minecraft": 3,
+        "Scratch": 33,
+        "Mimo": 3,
+        "Codecombat": 4
+    }
+}
