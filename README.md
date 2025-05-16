@@ -20,7 +20,7 @@ Desde el archivo unificado, calcular:
 
 ---
 
-### ![No implementado](https://img.shields.io/badge/Estado-No_implementado-red) **Requerimiento 3: Análisis de Frecuencia y Visualización**  
+### ![Implementado](https://img.shields.io/badge/Estado-Implementado-brightgreen) **Requerimiento 3: Análisis de Frecuencia y Visualización**  
 - Determinar la frecuencia de aparición de palabras clave en los resúmenes  
 - Unificar sinónimos para un análisis coherente  
 - Generar nube de palabras y gráficos de co-word dentro de la aplicación  
