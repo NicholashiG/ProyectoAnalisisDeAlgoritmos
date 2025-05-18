@@ -465,4 +465,4 @@ if len(G.nodes()) > 30:
     plt.savefig('data/word_freq_results/redes/red_coocurrencia_simplificada.png', dpi=300)
     plt.close()
 
-print("Análisis completado. Se generaron visualizaciones para TODAS las categorías.")
+print("Análisis completado. Se generaron visualizaciones para las categorías.")
